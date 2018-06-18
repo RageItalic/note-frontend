@@ -16,64 +16,6 @@ import Login from './Login'
 import YourNotes from './YourNotes'
 
 
-
-//const checkAuth = () => {
-  // var session = localStorage.getItem("session");
-  // console.log("LOKOKOKOKOKOKOK, ", session)
-  // return session
-
-  // console.log("storage aa rahyu ",localStorage)
-
-  // if(localStorage.getItem('auth')) {
-  //   var auth = localStorage.getItem('auth');
-  //   return auth
-  // } else if (localStorage.getItem('auth') === null) {
-  //   axios.get('http://localhost:5000/authenticate')
-  //     .then(res => {
-  //       var auth = res.data.authenticated
-  //       localStorage.setItem("auth", auth)
-  //       return auth
-  //     })
-  // }
-//}
-
-
-// const AuthRoute = ({ component: Component, ...rest }) => (
-//   <Route
-//     {...rest}
-//     render={props =>
-//       checkAuth() ? (
-//         //alert("WORKED")
-//         <Component {...props} />
-//       ) : (
-//         //alert("REDIRECTING")
-//         <Redirect
-//           to={{
-//             pathname: "/signup"
-//           }}
-//         />
-//       )
-//     }
-//   />
-// );
-
-// const AuthRoute = ({ component: Component, ...rest }) => {
-//   if (checkAuth()) {
-//     return (
-//       <Route {...rest} render={(props) => <Component {...props} />} />
-//     )
-//   } else {
-//     return (
-//       <Redirect
-//         to={{
-//           pathname: "/signup"
-//         }}
-//       />
-//     )
-//   }
-// }
-
-
 class App extends Component {
   state = {
     navBool: null

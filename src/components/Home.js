@@ -28,20 +28,6 @@ class Home extends Component {
         </div>
       </section>
     )
-
-    // return (
-    //   <React.Fragment>
-    //     <section className="hero is-fullheight topoBackground">
-    //       <div className="hero-body">
-    //         <div className="container has-text-centered">
-    //           <h1>
-    //             Note
-    //           </h1>
-    //         </div>
-    //       </div>
-    //     </section>
-    //   </React.Fragment>
-    // )
   }
 }
 

@@ -13,24 +13,6 @@ class Signup extends Component {
     //paramError: false
   }
 
-  // componentWillMount() {
-  //   console.log("props", window.location.search.substring(1))
-  //   var query = window.location.search.substring(1);
-  //   var params = query.split('&');
-  //   const paramArray = params.map(param => param.split('=')[1])
-  //   if(paramArray[0] && paramArray[1] === 'parthpatelgee@gmail.com') {
-  //     if(paramArray[0] === true) {
-  //       this.setState({
-  //         redirect: false
-  //       })
-  //     }
-  //   } else {
-  //     this.setState({
-  //       paramError: true
-  //     })
-  //   }
-  // }
-
   handleNameChange = (event) => {
     this.setState({name: event.target.value})
   }
