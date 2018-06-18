@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 import axios from 'axios';
+import renderHTML from 'react-render-html';
 
 
 class Note extends Component {
@@ -62,7 +63,7 @@ class Note extends Component {
           <div className="container has-text-centered">
             <h1>{title}</h1><p>by {email}</p>
             <br />
-            <p className="content">{content}</p>
+            <div className="content">{renderHTML(content)}</div>
           </div>
         </section>
       )

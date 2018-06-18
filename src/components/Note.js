@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom';
+import ReactQuill from 'react-quill';
 import axios from 'axios';
+import 'react-quill/dist/quill.snow.css';
 
 class Note extends Component {
   state = {
@@ -21,7 +23,7 @@ class Note extends Component {
   }
 
   handleContentChange = (event) => {
-    this.setState({content: event.target.value})
+    this.setState({content: event})
   }
 
   handleSubmit = (event) => {
@@ -100,14 +102,14 @@ class Note extends Component {
                   </p>
                 </div>
                 <div className="field">
-                  <div className="control" style={{height: '307px'}}>
-                    <textarea
-                      className="textarea"
-                      placeholder="Textarea"
-                      style={{height: '307px'}}
+                  <div className="control">
+                    <ReactQuill
+                      modules={Note.modules}
+                      placeholder="Your notes here..."
                       onChange={this.handleContentChange}
-                      value={content}>
-                    </textarea>
+                      value={content}
+                      required
+                    />
                   </div>
                 </div>
                 <div className="field is-grouped is-grouped-right">
@@ -127,6 +129,14 @@ class Note extends Component {
       </section>
     );
   }
+}
+
+Note.modules = {
+  toolbar: [
+    [{header: '1'}, {header: '2'}, {font: []}],
+    [{size: []}],
+    ['bold', 'italic', 'underline']
+  ]
 }
 
 export default Note;

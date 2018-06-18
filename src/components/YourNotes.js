@@ -17,19 +17,6 @@ class YourNotes extends Component {
       this.setState({
         redirect: false
       })
-      //const userData = localStorage.getItem('userData');
-      // axios.get(`http://localhost:5000/users/personNotes/${JSON.parse(userData).email}`, {
-      //   credentials: 'same-origin'
-      // })
-      //   .then(response => console.log("response is here, ", response))
-      //   .catch(err => console.log("error is here, ", err))
-
-      // axios(`http://localhost:5000/users/personNotes/${JSON.parse(userData).email}`, {
-      //   method: "get",
-      //   withCredentials: true
-      // })
-      // .then(response => console.log("response is here, ", response))
-      // .catch(err => console.log("error is here, ", err))
     }
   }
 

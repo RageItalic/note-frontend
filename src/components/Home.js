@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import Typist from 'react-typist';
 
 class Home extends Component {
   render() {
@@ -16,14 +17,31 @@ class Home extends Component {
               <br />
               <br />
               <h1>Note.</h1>
-
-              <Link to="/note" className="button">Make a Note</Link>
+              <Link to="/note" className="button">
+                <Typist>
+                  <Typist.Delay ms={2000} />
+                  Make a Note.
+                </Typist>
+              </Link>
             </div>
           </div>
-
         </div>
       </section>
     )
+
+    // return (
+    //   <React.Fragment>
+    //     <section className="hero is-fullheight topoBackground">
+    //       <div className="hero-body">
+    //         <div className="container has-text-centered">
+    //           <h1>
+    //             Note
+    //           </h1>
+    //         </div>
+    //       </div>
+    //     </section>
+    //   </React.Fragment>
+    // )
   }
 }
 
